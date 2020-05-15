@@ -24,7 +24,6 @@ def display_block(bv, addr):
 
 def get_all_binaryviews():
     all_binaryviews = []
-    # TODO: Deal with edge cases: https://github.com/Vector35/snippets/blob/master/__init__.py#L65-L74
     dock = DockHandler.getActiveDockHandler()
     if not dock:
         log_error("No dock handler. This should not happen.")
