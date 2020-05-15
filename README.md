@@ -1,6 +1,6 @@
 # Shared Object Symbol Resolution
 
-This plugin resolves symbols in shared objects (.so, currently only elf files are suported). The plugin will open any shared object files if needed.
+This plugin resolves symbols in shared objects (.so, currently only elf files are supported). The plugin will open any shared object files if needed.
 
 # Usage
 
