@@ -93,8 +93,11 @@ def resolve_imports(bv, address):
         if symbol.address == address:
             for library_bv in library_bvs:
                 for library_symbol in library_bv.get_symbols_by_name(symbol.name):
-                    display_block(library_bv, library_symbol.address)
-                    return
+                    if (
+                        library_symbol.auto
+                    ):  # Ensure that renamed symbols are not counted
+                        display_block(library_bv, library_symbol.address)
+                        return
             interaction.show_message_box(
                 "Shared Object Symbol Resolution",
                 "Selected symbol not found in shared libraries: {}".format(library_bvs),
